@@ -1,11 +1,3 @@
-let mobilenumber = {
-    length: 8,
-    possible: [],
-}
-
-
-let finalnumber = []
-
 function generateNumber(length) {
 
     let number = '';
@@ -13,6 +5,7 @@ function generateNumber(length) {
     for (var i = 0; i < length; i++) {
         number += Math.floor(Math.random() * 9) + ''
     }
+
     return number;
 }
 
