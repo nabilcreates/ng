@@ -2,13 +2,13 @@
 
 ## THESE METHODS RETURN A NUMBER, YOU CAN USE THEM AS VARIABLES
 
-### DECLARE
+# DECLARE
 ```JAVASCRIPT
 var numbergenerator
     -   new NumberGenerator()
 ```
 
-### .generateNumber(options)
+# .generateNumber(options)
 -   generate a number
 ```javascript
 
@@ -22,7 +22,7 @@ numbergenerator.generateNumber(options)
 -   e.g:
     -   {length: 8}
 
-### .evaluate_number(start,stop,req)
+# .evaluate_number(start,stop,req)
 -   return a number that matches the specified pattern
 ```javascript
 //EXAMPLES
@@ -36,7 +36,7 @@ numbergenerator.evaluate_number(0,2,81) // -> IT WILL RETURN NUMBERS THAT MATCHE
 -   req (int or string)
     -   requirement
 
-### .writeTo(start, stop, req, writename)
+# .writeTo(start, stop, req, writename)
 -   evaluate_number() but with writing included (to an external .txt file) **!! IT WILL ONLY WRITE IF A NUMBER IS FOUND, IF IT IS NOT FOUND, IT WONT WRITE ANYTHING, SO TO MAKE IT WRITE SOMETHING, RUN THIS IN A LOOP !!**
 ```javascript
 numbergenerator.writeTo(start, stop, req, writename)
