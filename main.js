@@ -8,12 +8,17 @@ class NumberGenerator {
 
     generateNumber(options) {
 
+        // NUMBER IS EMPTY (SO IT CAN CONCAT LATER)
         let number = '';
 
-        for (var i = 0; i < options.times; i++) {
+        // LOOPS THROUGH THE OPTION (LENGTH) THAT IS GIVEN AS AN ARGUMENT
+        for (var i = 0; i < options.length; i++) {
+
+            // CONCAT WITH NUMBER
             number += Math.floor(Math.random() * 10) + ''
         }
 
+        // RETURN THE NUMBER
         return number;
     }
 
@@ -36,13 +41,3 @@ class NumberGenerator {
         
     }
 }
-
-/*
-==============================================
-THE CODE BELOW IS AN EXAMPLE TO BE USED IN AN
-EXTERNAL JS FILE
-==============================================
-*/
-
-// NEW INSTANCE OF CLASS
-// var numbergenerator = new NumberGenerator()
