@@ -16,20 +16,26 @@ function generateNumber(length) {
     return number;
 }
 
-function evaluateNumber() {
-    // let stupidnum = 900
-    let thenumber = generateNumber(8)
+function evaluateNumber(startnumber) {
 
+    let number_eval = generateNumber(8);
+    
+    // IF FIRST DIGIT IS NOT EQUAL TO 8
+    // TO STRING CONVERTS IT TO STRING
+    // SLICE BASICALLY SLICES FROM INDEX 0 TO 1
+    if (number_eval.toString().slice(0, 1) !== '8') {
 
-    if (thenumber.toString().slice(0, 1) !== '8') {
+        // RUN THE FUNCTION AGAIN
         setTimeout(() => {
             evaluateNumber()
         }, 1)
-    }else{
-        console.log(`DONE! ${thenumber}`)
+    } else {
+
+        // CONSOLE LOG THE NUMBER
+        console.log(number_eval)
     }
-
-
 }
 
-evaluateNumber()
+for (var i = 0; i < 100; i++) {
+    evaluateNumber()
+}
