@@ -53,31 +53,22 @@ class NumberGenerator {
 
     }
 
-    writeTo(start, stop, req, times, writename) {
-        // CLEAR THE FILE (OVERWRITE WITH BLANK)
-        fs.writeFile(writename, ``, {
-            flag: 'w'
-        })
+    writeTo(start, stop, req, writename) {
 
-        // LOOP 10000 TIMES
-        for (var i = 0; i < times; i++) {
+        // AN INSTANCE OF EVALUATE_NUMBER IS CREATED WITH SPECIFIC PATTERN
+        var num = this.evaluate_number(start, stop, req)
 
-            // AN INSTANCE OF EVALUATE_NUMBER IS CREATED WITH SPECIFIC PATTERN
-            var num = this.evaluate_number(start, stop, req)
+        // CONSOLE LOG (DEBUG)
+        // console.log(i)
+        // console.log(num !== undefined)
 
-            // CONSOLE LOG (DEBUG)
-            // console.log(i)
-            // console.log(num !== undefined)
-
-            // NUMBERS THAT DOESNT MEET THE PATTERN WILL RETURN UNDEFINED, IF IT IS NOT UNDEFINED THEN WRITE IT TO THE FILE
-            if (num !== undefined) {
-                fs.writeFile(writename, `${i}: ${num} \n`, {
-                    flag: 'a'
-                }, function () {
-                    console.log(`DONE`)
-                })
-            }
-
+        // NUMBERS THAT DOESNT MEET THE PATTERN WILL RETURN UNDEFINED, IF IT IS NOT UNDEFINED THEN WRITE IT TO THE FILE
+        if (num !== undefined) {
+            fs.writeFile(`${writename}.txt`, `${num} \n`, {
+                flag: 'a'
+            }, function () {
+                console.log(`DONE`)
+            })
         }
     }
 }
