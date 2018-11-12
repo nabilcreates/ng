@@ -31,16 +31,15 @@ numbergenerator.evaluate_number(0,2,81) // -> IT WILL RETURN NUMBERS THAT MATCHE
 -   stop = place where you want it to stop checking
 -   req = requirement
 
-### .writeTo(start, stop, req, times, writename)
--   evaluate_number() but with writing included (to an external .txt file)
+### .writeTo(start, stop, req, writename)
+-   evaluate_number() but with writing included (to an external .txt file) **!! IT WILL ONLY WRITE IF A NUMBER IS FOUND, IF IT IS NOT FOUND, IT WONT WRITE ANYTHING, SO TO MAKE IT WRITE SOMETHING, RUN THIS IN A LOOP !!**
 ```javascript
-numbergenerator.writeTo(start, stop, req, times, writename)
+numbergenerator.writeTo(start, stop, req, writename)
 ```
 -   start = place where you want it to check for (starting from 0)
 -   stop = place where you want it to stop checking
 -   req = requirement
--   times = run the loop how many times?
--   writename = the name of the file you want to write [WITH .txt AT THE BACK]
+-   writename = the name of the file you want to write [WITHOUT THE .txt AT THE BACK]
 
 ```
 DISCLAIMER:
