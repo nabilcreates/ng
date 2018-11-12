@@ -10,7 +10,7 @@ class NumberGenerator {
 
         let number = '';
 
-        for (var i = 0; i < options.length; i++) {
+        for (var i = 0; i < options.times; i++) {
             number += Math.floor(Math.random() * 10) + ''
         }
 
