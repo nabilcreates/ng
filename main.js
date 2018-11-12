@@ -36,12 +36,12 @@ function writing(){
     var data = evaluateNumber()
     
     if(data == undefined){
-        data = ''
+        data = 'no match'
     }
     
     fs.writeFileSync('./cool.txt' , data + '\n' , {flag: 'a'})
 }
 
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 500; i++) {
     writing()
 }
