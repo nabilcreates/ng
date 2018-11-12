@@ -16,7 +16,7 @@ function generateNumber(length) {
     return number;
 }
 
-function evaluateNumber(startnumber) {
+function evaluateNumber() {
 
     let number_eval = generateNumber(8);
     
