@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="app">
+        <ul>
+
+            <!-- LOOP THROUGH THE PHONENUMBERS ARRAY -->
+            <!-- V-IF NUM!==UNDEFINED IS BECAUSE IF THE NUMBER PATTERN IS NOT MET, IT WILL RETURN UNDEFINED SO WE ONLY RENDER THE ONES THAT IS NOT UNDEFINED -->
+            <li v-for='num in phonenumbers' v-if='num!==undefined'>{{num}}</li>
+        </ul>
+        
+    </div>
+        
+    <!-- THE WEB VERSION OF NUMBERGENERATOR -->
+    <script src="./ng/webng.js"></script>
+
+    <!-- VUEJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+
+    <!-- SCRIPTFILE -->
+    <script src="./website.js"></script>
+</body>
+</html>
