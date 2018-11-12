@@ -14,12 +14,13 @@ var numbergenerator
 
 // GENERATE PHONE NUMBERS
 numbergenerator.generateNumber(options)
-
-// OPTIONS AVAILABLE ARE:
-options = {
-    length: // THE LENGTH OF THE NUMBER (8 WILL RETURN A 8 DIGIT NUMBER)
-}
 ```
+
+-   options (object)
+    -   length
+        -  THE LENGTH OF THE NUMBER (8 WILL RETURN A 8 DIGIT NUMBER)
+-   e.g:
+    -   {length: 8}
 
 ### .evaluate_number(start,stop,req)
 -   return a number that matches the specified pattern
