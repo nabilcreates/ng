@@ -1,33 +1,46 @@
 # RANDOM PHONE NUMBER GENERATOR
 
-` ALL OF THE METHODS BELOW WILL RETURN A VALUE, SO YOU CAN USE IT AS A VARIABLE `
+## THESE METHODS RETURN A NUMBER, YOU CAN USE THEM AS VARIABLES
 
-Generate phone numbers
-```javascript
-
-// DECLARE
+### DECLARE
+```JAVASCRIPT
 var numbergenerator = new NumberGenerator()
+```
+
+### .generateNumber(options)
+-   generate a number
+```javascript
 
 // GENERATE PHONE NUMBERS
 numbergenerator.generateNumber(options)
 
 // OPTIONS AVAILABLE ARE:
 options = {
-    length: // THE LENGTH OF THE NUMBER
+    length: // THE LENGTH OF THE NUMBER (8 WILL RETURN A 8 DIGIT NUMBER)
 }
 ```
 
-Evaluating numbers (Returns numbers that ONLY match the specified pattern)
+### .evaluate_number(start,stop,req)
+-   return a number that matches the specified pattern
 ```javascript
-numbergenerator.evaluate_number(start,stop,req)
-// start = place where you want it to check for (starting from 0)
-// stop = place where you want it to stop checking
-// req = requirement
-
+//EXAMPLES
 numbergenerator.evaluate_number(0,2,81) // -> IT WILL RETURN NUMBERS THAT MATCHES `81` FROM THE FIRST 2 DIGITS ([81]998382)
-
-numbergenerator.evaluate_number(1,2,81) // -> IT WILL RETURN NUMBERS THAT MATCHES `81` FROM INDEX 1 TILL 2 (9[81]00231)
 ```
+
+-   start = place where you want it to check for (starting from 0)
+-   stop = place where you want it to stop checking
+-   req = requirement
+
+### .writeTo(start, stop, req, times, writename)
+-   evaluate_number() but with writing included (to an external .txt file)
+```javascript
+numbergenerator.writeTo(start, stop, req, times, writename)
+```
+-   start = place where you want it to check for (starting from 0)
+-   stop = place where you want it to stop checking
+-   req = requirement
+-   times = run the loop how many times?
+-   writename = the name of the file you want to write [WITH .txt AT THE BACK]
 
 ```
 DISCLAIMER:
