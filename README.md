@@ -1,4 +1,7 @@
 # RANDOM PHONE NUMBER GENERATOR
+
+` ALL OF THE METHODS BELOW WILL RETURN A VALUE, SO YOU CAN USE IT AS A VARIABLE `
+
 Generate phone numbers
 ```javascript
 
@@ -10,7 +13,7 @@ numbergenerator.generateNumber(options)
 
 // OPTIONS AVAILABLE ARE:
 options = {
-    times: //How many numbers you want it to generate
+    length: // THE LENGTH OF THE NUMBER
 }
 ```
 
