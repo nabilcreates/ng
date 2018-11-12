@@ -4,7 +4,8 @@
 
 ### DECLARE
 ```JAVASCRIPT
-var numbergenerator = new NumberGenerator()
+var numbergenerator
+    -   new NumberGenerator()
 ```
 
 ### .generateNumber(options)
@@ -27,19 +28,26 @@ options = {
 numbergenerator.evaluate_number(0,2,81) // -> IT WILL RETURN NUMBERS THAT MATCHES `81` FROM THE FIRST 2 DIGITS ([81]998382)
 ```
 
--   start = place where you want it to check for (starting from 0)
--   stop = place where you want it to stop checking
--   req = requirement
+-   start (int)
+    -   place where you want it to check for (starting from 0)
+-   stop (int)
+    -   place where you want it to stop checking
+-   req (int or string)
+    -   requirement
 
 ### .writeTo(start, stop, req, writename)
 -   evaluate_number() but with writing included (to an external .txt file) **!! IT WILL ONLY WRITE IF A NUMBER IS FOUND, IF IT IS NOT FOUND, IT WONT WRITE ANYTHING, SO TO MAKE IT WRITE SOMETHING, RUN THIS IN A LOOP !!**
 ```javascript
 numbergenerator.writeTo(start, stop, req, writename)
 ```
--   start = place where you want it to check for (starting from 0)
--   stop = place where you want it to stop checking
--   req = requirement
--   writename = the name of the file you want to write [WITHOUT THE .txt AT THE BACK]
+-   start (int)
+    -   place where you want it to check for (starting from 0)
+-   stop (int)
+    -   place where you want it to stop checking
+-   req (int or string)
+    -   requirement
+-   writename (string)
+    -   the name of the file you want to write [WITHOUT THE .txt AT THE BACK]
 
 ```
 DISCLAIMER:
