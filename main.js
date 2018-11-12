@@ -1,3 +1,5 @@
+var fs = require('fs')
+
 function generateNumber(length) {
 
     let number = '';
@@ -25,10 +27,21 @@ function evaluateNumber() {
     } else {
 
         // CONSOLE LOG THE NUMBER
-        console.log(number_eval)
+        return number_eval.toString()
     }
 }
 
+function writing(){
+
+    var data = evaluateNumber()
+    
+    if(data == undefined){
+        data = ''
+    }
+    
+    fs.writeFileSync('./cool.txt' , data + '\n' , {flag: 'a'})
+}
+
 for (var i = 0; i < 100; i++) {
-    evaluateNumber()
+    writing()
 }
