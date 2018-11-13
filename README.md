@@ -34,11 +34,11 @@ ng.evaluate_number(ng.generateNumber(8) 0, 1, 8)
 -   num_eval (int or str)
     -    A return value from .generateNumber()
 -   start (int)
-    -   place where you want it to check for (starting from 0)
+    -   index where you want it to start checking
 -   stop (int)
-    -   place where you want it to stop checking
+    -   index where you want it to stop checking
 -   req (int or string)
-    -   requirement
+    -   requirement to meet
 
 # .writeTo(start, stop, req, writename) [X]
 ```
