@@ -2,35 +2,37 @@
 
 ## THESE METHODS RETURN DATA, YOU CAN USE THEM AS VARIABLES
 
-### WEB VERSION OF NG DOESNT SUPPORT .writeTo()
-
 # DECLARE
 ```JAVASCRIPT
-var numbergenerator
-    -   new NumberGenerator()
+var ng = new NumberGenerator()
 ```
 
-# .generateNumber(options)
--   generate a number
+# .generateNumber(length)
+-   returns a RANDOM number matching the length passed as an argument
 ```javascript
+ng.generateNumber(length)
 
-// GENERATE PHONE NUMBERS
-numbergenerator.generateNumber(options)
+ng.generateNumber(8)
+// RETURNS 92830201
+
+ng.generateNumber(2)
+// RETURNS 23
 ```
 
--   options (object)
-    -   length
-        -  THE LENGTH OF THE NUMBER (8 WILL RETURN A 8 DIGIT NUMBER)
--   e.g:
-    -   {length: 8}
+-   length (int) [default: `0`]
+    - The length of the number
 
-# .evaluate_number(start,stop,req)
--   return a number that matches the specified pattern
+# evaluate_number(num_eval, start, stop, req)
+-   return a number that matches the specified pattern (Non matching number will return undefined)
 ```javascript
-//EXAMPLES
-numbergenerator.evaluate_number(0,2,81) // -> IT WILL RETURN NUMBERS THAT MATCHES `81` FROM THE FIRST 2 DIGITS ([81]998382)
-```
+ng.evaluate_number(num_eval, start, stop, req)
 
+ng.evaluate_number(ng.generateNumber(8) 0, 1, 8)
+// RETURNS 'undefined' ON NUMBERS THAT DOESNT MATCH THE PATTERN
+// RETURNS THE NUMBER IF IT MATCHES THE PATTERN (e.g: 87332212)
+```
+-   num_eval (int or str)
+    -    A return value from .generateNumber()
 -   start (int)
     -   place where you want it to check for (starting from 0)
 -   stop (int)
@@ -38,20 +40,7 @@ numbergenerator.evaluate_number(0,2,81) // -> IT WILL RETURN NUMBERS THAT MATCHE
 -   req (int or string)
     -   requirement
 
-# .writeTo(start, stop, req, writename)
--   evaluate_number() but with writing included (to an external .txt file) **!! IT WILL ONLY WRITE IF A NUMBER IS FOUND, IF IT IS NOT FOUND, IT WONT WRITE ANYTHING, SO TO MAKE IT WRITE SOMETHING, RUN THIS IN A LOOP !!**
-```javascript
-numbergenerator.writeTo(start, stop, req, writename)
-```
--   start (int)
-    -   place where you want it to check for (starting from 0)
--   stop (int)
-    -   place where you want it to stop checking
--   req (int or string)
-    -   requirement
--   writename (string)
-    -   the name of the file you want to write [WITHOUT THE .txt AT THE BACK]
-
+# .writeTo(start, stop, req, writename) [X]
 ```
 DISCLAIMER:
 I AM NOT RESPONSIBLE FOR YOUR ACTIONS IF YOU USE THESE NUMBERS GENERATED FROM THIS PROGRAM IRRESPONSIBLY!
